@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ড. কেরামত আলী — জীবন ও কর্ম</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600&family=Playfair+Display:wght@400;700;900i&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a3a2a;
+    --forest-mid: #2d5c3e;
+    --forest-light: #4a8c5c;
+    --gold: #c8973a;
+    --gold-light: #e8b85c;
+    --cream: #f5f0e8;
+    --parchment: #ede5d5;
+    --text-dark: #1a1a14;
+    --text-mid: #3d3820;
+    --text-light: #8a7a50;
+    --white: #fefcf8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--text-dark);
+    font-family: 'Noto Serif Bengali', serif;
+    overflow-x: hidden;
+  }
+
+  /* DECORATIVE PATTERN */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(200,151,58,0.03) 40px, rgba(200,151,58,0.03) 41px),
+      repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(200,151,58,0.03) 40px, rgba(200,151,58,0.03) 41px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(26,58,42,0.97);
+    backdrop-filter: blur(12px);
+    padding: 0 2rem;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(200,151,58,0.3);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--gold-light);
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(245,240,232,0.8);
+    text-decoration: none;
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+    position: relative;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0; right: 0;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-left {
+    background: linear-gradient(160deg, var(--forest) 0%, var(--forest-mid) 60%, #1e4a30 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 4rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(200,151,58,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-left::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(74,140,92,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .photo-frame {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2.5rem;
+  }
+
+  .photo-frame::before {
+    content: '';
+    position: absolute;
+    top: -12px; left: -12px; right: 12px; bottom: -12px;
+    border: 2px solid rgba(200,151,58,0.5);
+    z-index: -1;
+  }
+
+  .photo-frame::after {
+    content: '';
+    position: absolute;
+    top: 12px; left: 12px; right: -12px; bottom: -12px;
+    border: 1px solid rgba(200,151,58,0.25);
+    z-index: -1;
+  }
+
+  .photo-frame img {
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    filter: sepia(5%) contrast(1.05);
+  }
+
+  .hero-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+    line-height: 1.3;
+    z-index: 2;
+    position: relative;
+  }
+
+  .hero-title {
+    color: var(--gold-light);
+    font-size: 0.9rem;
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0.75rem;
+    letter-spacing: 0.08em;
+    line-height: 1.8;
+    z-index: 2;
+    position: relative;
+  }
+
+  .ornament {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 1.5rem auto;
+    z-index: 2;
+    position: relative;
+  }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    margin-top: 1rem;
+  }
+
+  .tag {
+    background: rgba(200,151,58,0.15);
+    border: 1px solid rgba(200,151,58,0.4);
+    color: var(--gold-light);
+    font-size: 0.75rem;
+    font-family: 'Noto Sans Bengali', sans-serif;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+  }
+
+  .hero-right {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 4rem 4rem;
+    position: relative;
+  }
+
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: linear-gradient(180deg, var(--gold), var(--forest-light), var(--gold));
+  }
+
+  .quote-block {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--forest);
+    line-height: 1.9;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .quote-block::before {
+    content: '"';
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    color: rgba(200,151,58,0.2);
+    position: absolute;
+    top: -1.5rem;
+    left: -0.5rem;
+    line-height: 1;
+  }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .stat-card {
+    text-align: center;
+    padding: 1.2rem;
+    background: var(--cream);
+    border-bottom: 3px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(26,58,42,0.1);
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-top: 0.4rem;
+    line-height: 1.4;
+  }
+
+  /* SECTIONS */
+  section {
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-header {
+    text-align: center;
+    padding: 5rem 2rem 3rem;
+  }
+
+  .section-label {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--forest);
+    line-height: 1.2;
+  }
+
+  .section-ornament {
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 1.2rem auto 0;
+  }
+
+  /* EDUCATION TIMELINE */
+  .education-section {
+    background: var(--white);
+    padding-bottom: 5rem;
+  }
+
+  .timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--gold) 0%, var(--forest-light) 50%, var(--gold) 100%);
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    gap: 0;
+    margin-bottom: 2rem;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .timeline-item:nth-child(odd) .tl-content { grid-column: 1; text-align: right; padding-right: 2rem; }
+  .timeline-item:nth-child(odd) .tl-empty { grid-column: 3; }
+  .timeline-item:nth-child(even) .tl-content { grid-column: 3; text-align: left; padding-left: 2rem; }
+  .timeline-item:nth-child(even) .tl-empty { grid-column: 1; }
+
+  .tl-dot {
+    grid-column: 2;
+    width: 16px; height: 16px;
+    background: var(--gold);
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--gold);
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+  .tl-content {
+    background: var(--cream);
+    padding: 1.2rem 1.5rem;
+    border-left: 3px solid var(--forest-light);
+    transition: border-color 0.3s, transform 0.3s;
+  }
+
+  .timeline-item:nth-child(even) .tl-content { border-left: none; border-right: 3px solid var(--forest-light); }
+
+  .tl-content:hover { border-color: var(--gold); transform: scale(1.01); }
+
+  .tl-year {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+
+  .tl-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--forest);
+    line-height: 1.4;
+  }
+
+  .tl-sub {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.3rem;
+  }
+
+  /* CAREER */
+  .career-section {
+    background: var(--forest);
+    padding-bottom: 5rem;
+    color: var(--cream);
+  }
+
+  .career-section .section-title { color: var(--cream); }
+  .career-section .section-label { color: var(--gold-light); }
+
+  .career-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .career-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(200,151,58,0.25);
+    padding: 2rem;
+    transition: background 0.3s, transform 0.3s, border-color 0.3s;
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .career-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+  }
+
+  .career-card:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-4px);
+    border-color: rgba(200,151,58,0.5);
+  }
+
+  .career-card:hover::before { transform: scaleX(1); }
+
+  .career-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .career-year {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--gold-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .career-role {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .career-place {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(245,240,232,0.6);
+  }
+
+  /* POLITICAL */
+  .political-section {
+    background: var(--parchment);
+    padding-bottom: 5rem;
+  }
+
+  .political-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .political-timeline {
+    position: relative;
+  }
+
+  .pol-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .pol-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .pol-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .pol-dot {
+    width: 12px; height: 12px;
+    background: var(--forest);
+    border-radius: 50%;
+    flex-shrink: 0;
+    border: 2px solid var(--gold);
+  }
+
+  .pol-connector {
+    width: 2px;
+    flex-grow: 1;
+    background: rgba(26,58,42,0.2);
+    margin-top: 4px;
+  }
+
+  .pol-content { flex-grow: 1; }
+
+  .pol-period {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.78rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  .pol-role {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--forest);
+    line-height: 1.4;
+  }
+
+  .arrest-panel {
+    background: var(--forest);
+    padding: 2.5rem;
+    color: var(--cream);
+  }
+
+  .arrest-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(200,151,58,0.3);
+    padding-bottom: 1rem;
+  }
+
+  .arrest-stat {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .arrest-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .arrest-desc {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(245,240,232,0.8);
+    line-height: 1.6;
+  }
+
+  .arrest-years {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .arrest-year-pill {
+    background: rgba(200,151,58,0.2);
+    border: 1px solid rgba(200,151,58,0.4);
+    color: var(--gold-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+  }
+
+  /* PUBLICATIONS */
+  .pub-section {
+    background: var(--white);
+    padding-bottom: 5rem;
+  }
+
+  .pub-card {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    padding: 0 2rem;
+  }
+
+  .book-display {
+    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-mid) 100%);
+    padding: 3rem;
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    box-shadow: 20px 20px 60px rgba(26,58,42,0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+
+  .book-display:hover {
+    transform: translateY(-6px) rotateX(2deg);
+    box-shadow: 25px 25px 80px rgba(26,58,42,0.3);
+  }
+
+  .book-display::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 150px; height: 150px;
+    background: radial-gradient(circle, rgba(200,151,58,0.2), transparent 70%);
+  }
+
+  .book-spine {
+    width: 40px;
+    background: var(--gold);
+    align-self: stretch;
+    flex-shrink: 0;
+    min-height: 150px;
+    position: relative;
+  }
+
+  .book-spine::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .book-info { flex-grow: 1; }
+
+  .book-label {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .book-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .book-desc {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(245,240,232,0.7);
+    line-height: 1.8;
+  }
+
+  /* SOCIAL */
+  .social-section {
+    background: var(--parchment);
+    padding-bottom: 6rem;
+  }
+
+  .social-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .social-card {
+    background: var(--white);
+    padding: 1.8rem;
+    border-top: 4px solid var(--forest-light);
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+  }
+
+  .social-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(26,58,42,0.1);
+  }
+
+  .social-icon { font-size: 1.8rem; margin-bottom: 1rem; display: block; }
+
+  .social-role {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--forest);
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
+  }
+
+  .social-org {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--forest);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-sub {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(245,240,232,0.5);
+  }
+
+  .footer-line {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 1.5rem auto;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 100px 2rem 3rem; }
+    .hero-right { padding: 3rem 2rem; }
+    .stat-row { grid-template-columns: 1fr 1fr 1fr; }
+    .career-grid { grid-template-columns: 1fr; }
+    .political-layout { grid-template-columns: 1fr; }
+    .social-grid { grid-template-columns: 1fr 1fr; }
+    .timeline::before { left: 20px; }
+    .timeline-item { grid-template-columns: 0 40px 1fr; }
+    .timeline-item:nth-child(odd) .tl-content { grid-column: 3; text-align: left; padding-left: 1rem; padding-right: 0; }
+    .timeline-item:nth-child(odd) .tl-empty { display: none; }
+    .timeline-item:nth-child(even) .tl-content { grid-column: 3; }
+    .timeline-item:nth-child(even) .tl-empty { display: none; }
+    .tl-dot { grid-column: 2; }
+    .nav-links { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .social-grid { grid-template-columns: 1fr; }
+    .stat-row { grid-template-columns: 1fr 1fr; }
+    .section-title { font-size: 1.8rem; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-left > * {
+    animation: fadeUp 0.8s ease both;
+  }
+  .hero-left > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-left > *:nth-child(2) { animation-delay: 0.3s; }
+  .hero-left > *:nth-child(3) { animation-delay: 0.4s; }
+  .hero-left > *:nth-child(4) { animation-delay: 0.5s; }
+  .hero-left > *:nth-child(5) { animation-delay: 0.6s; }
+
+  .hero-right > * {
+    animation: fadeUp 0.8s ease both;
+  }
+  .hero-right > *:nth-child(1) { animation-delay: 0.4s; }
+  .hero-right > *:nth-child(2) { animation-delay: 0.6s; }
+  .hero-right > *:nth-child(3) { animation-delay: 0.8s; }
+
+  /* SCROLL INDICATOR */
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(200,151,58,0.7);
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-size: 0.7rem;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  .scroll-arrow {
+    width: 20px; height: 20px;
+    border-right: 2px solid var(--gold);
+    border-bottom: 2px solid var(--gold);
+    transform: rotate(45deg);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">Dr. Keramat Ali</span>
+  <ul class="nav-links">
+    <li><a href="#education">শিক্ষা</a></li>
+    <li><a href="#career">কর্মজীবন</a></li>
+    <li><a href="#politics">রাজনীতি</a></li>
+    <li><a href="#publications">রচনা</a></li>
+    <li><a href="#social">সমাজসেবা</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="photo-frame">
+      <img src="/mnt/user-data/uploads/1000093807.jpg" alt="ড. কেরামত আলী">
+    </div>
+    <h1 class="hero-name">ড. কেরামত আলী</h1>
+    <div class="ornament"></div>
+    <p class="hero-title">
+      পিএইচডি (রাজশাহী বিশ্ববিদ্যালয়)<br>
+      সংসদ সদস্য, চাঁপাইনবাবগঞ্জ-১<br>
+      আমীর, রাজশাহী মহানগরী
+    </p>
+    <div class="hero-tags">
+      <span class="tag">শিক্ষাবিদ</span>
+      <span class="tag">রাজনীতিবিদ</span>
+      <span class="tag">সমাজসেবক</span>
+      <span class="tag">লেখক</span>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-arrow"></div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <p class="quote-block">
+      চাঁপাইনবাবগঞ্জের শিবগঞ্জ থেকে জাতীয় সংসদ পর্যন্ত — একজন আলেম, শিক্ষক ও সংগ্রামী মানুষের অদম্য যাত্রার গল্প।
+    </p>
+    <p style="font-family:'Noto Sans Bengali',sans-serif; font-size:0.9rem; color:var(--text-mid); line-height:2;">
+      চাঁপাইনবাবগঞ্জের জালমাছমারী গ্রামে জন্মগ্রহণকারী ড. কেরামত আলী একাধারে একজন বিশিষ্ট শিক্ষাবিদ, ইসলামি চিন্তাবিদ ও রাজনীতিক। পিতার চিকিৎসকতা ও আলেমের উত্তরাধিকার বহন করে তিনি দেশের শিক্ষা, সমাজ ও রাজনীতিতে অবদান রেখে চলেছেন দশকের পর দশক।
+    </p>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-num">৫৪</div>
+        <div class="stat-label">রাজনৈতিক মামলা</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">৯</div>
+        <div class="stat-label">বার কারাবরণ</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">৩৫+</div>
+        <div class="stat-label">বছরের কর্মজীবন</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education-section" id="education">
+  <div class="section-header">
+    <span class="section-label">জ্ঞানের সন্ধানে</span>
+    <h2 class="section-title">শিক্ষাজীবন</h2>
+    <div class="section-ornament"></div>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="tl-content">
+        <div class="tl-year">১৯৭৪</div>
+        <div class="tl-title">দাখিল পরীক্ষায় উত্তীর্ণ</div>
+        <div class="tl-sub">ভবানীপূর দাখিল মাদ্রাসা</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-empty"></div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-empty"></div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-year">আলিম</div>
+        <div class="tl-title">আলিম পাশ</div>
+        <div class="tl-sub">ছত্রাজিতপুর ফাযিল মাদ্রাসা</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-content">
+        <div class="tl-year">ফাযিল</div>
+        <div class="tl-title">ফাযিল পাশ</div>
+        <div class="tl-sub">লক্ষীপুর টুমচর কামিল মাদ্রাসা</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-empty"></div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-empty"></div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-year">কামিল</div>
+        <div class="tl-title">ডাবল কামিল — হাদীস ও তাফসীর</div>
+        <div class="tl-sub">মাদ্রাসা-ই-আলিয়া, ঢাকা</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-content">
+        <div class="tl-year">১৯৭৯</div>
+        <div class="tl-title">ইন্টারমিডিয়েট</div>
+        <div class="tl-sub">রাজশাহী নিউ গভঃ ডিগ্রী কলেজ</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-empty"></div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-empty"></div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-year">১৯৮৩</div>
+        <div class="tl-title">অনার্স — রাষ্ট্রবিজ্ঞান</div>
+        <div class="tl-sub">রাজশাহী বিশ্ববিদ্যালয়</div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-content">
+        <div class="tl-year">১৯৮৭</div>
+        <div class="tl-title">মাস্টার্স — ইসলামিক স্টাডিজ</div>
+        <div class="tl-sub">রাজশাহী বিশ্ববিদ্যালয়</div>
+      </div>
+      <div class="tl-dot"></div>
+      <div class="tl-empty"></div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-empty"></div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <div class="tl-year">২০১৪</div>
+        <div class="tl-title">পিএইচডি ডিগ্রি অর্জন</div>
+        <div class="tl-sub">রাজশাহী বিশ্ববিদ্যালয় — চাঁপাইনবাবগঞ্জ অঞ্চলে ইসলাম প্রচার ও সমাজ সংস্কারে আলিমদের ভূমিকা (১৯০০–২০০৬)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section class="career-section" id="career">
+  <div class="section-header">
+    <span class="section-label">দায়িত্ব ও সেবা</span>
+    <h2 class="section-title">কর্মজীবন</h2>
+    <div class="section-ornament"></div>
+  </div>
+
+  <div class="career-grid">
+    <div class="career-card">
+      <span class="career-icon">🏫</span>
+      <div class="career-year">১৯৯১ সাল</div>
+      <div class="career-role">প্রিন্সিপাল</div>
+      <div class="career-place">শিবগঞ্জ ইসলামী একাডেমী</div>
+    </div>
+    <div class="career-card">
+      <span class="career-icon">📚</span>
+      <div class="career-year">১৯৯৯ সাল</div>
+      <div class="career-role">প্রভাষক হিসেবে যোগদান</div>
+      <div class="career-place">ছত্রাজিতপুর ফাযিল মাদ্রাসা</div>
+    </div>
+    <div class="career-card">
+      <span class="career-icon">🎓</span>
+      <div class="career-year">২০১৮ সাল</div>
+      <div class="career-role">সহকারী অধ্যাপক হিসেবে অবসর</div>
+      <div class="career-place">দীর্ঘ শিক্ষকতা জীবনের পরিসমাপ্তি</div>
+    </div>
+  </div>
+</section>
+
+<!-- POLITICAL -->
+<section class="political-section" id="politics">
+  <div class="section-header">
+    <span class="section-label">দেশ ও মানুষের জন্য</span>
+    <h2 class="section-title">রাজনৈতিক জীবন</h2>
+    <div class="section-ornament"></div>
+  </div>
+
+  <div class="political-layout">
+    <div class="political-timeline">
+      <div class="pol-item">
+        <div class="pol-line"><div class="pol-dot"></div><div class="pol-connector"></div></div>
+        <div class="pol-content">
+          <div class="pol-period">১৯৭৭</div>
+          <div class="pol-role">বাংলাদেশ ইসলামী ছাত্রশিবিরে যোগদান (কর্মী)</div>
+        </div>
+      </div>
+      <div class="pol-item">
+        <div class="pol-line"><div class="pol-dot"></div><div class="pol-connector"></div></div>
+        <div class="pol-content">
+          <div class="pol-period">১৯৮৪–১৯৮৮</div>
+          <div class="pol-role">রাজশাহী মহানগর শাখার সভাপতি</div>
+        </div>
+      </div>
+      <div class="pol-item">
+        <div class="pol-line"><div class="pol-dot"></div><div class="pol-connector"></div></div>
+        <div class="pol-content">
+          <div class="pol-period">কেন্দ্রীয়</div>
+          <div class="pol-role">বিদেশ বিষয়ক সম্পাদক (কেন্দ্রীয় পর্যায়)</div>
+        </div>
+      </div>
+      <div class="pol-item">
+        <div class="pol-line"><div class="pol-dot"></div><div class="pol-connector"></div></div>
+        <div class="pol-content">
+          <div class="pol-period">১৯৯০–২০০০</div>
+          <div class="pol-role">শিবগঞ্জ উপজেলা আমীর — বাংলাদেশ জামায়াতে ইসলামী</div>
+        </div>
+      </div>
+      <div class="pol-item">
+        <div class="pol-line"><div class="pol-dot"></div><div class="pol-connector"></div></div>
+        <div class="pol-content">
+          <div class="pol-period">২০০০–২০০৬</div>
+          <div class="pol-role">জেলা সেক্রেটারি</div>
+        </div>
+      </div>
+      <div class="pol-item">
+        <div class="pol-line"><div class="pol-dot"></div><div class="pol-connector"></div></div>
+        <div class="pol-content">
+          <div class="pol-period">২০০৬–২০১৮</div>
+          <div class="pol-role">জেলা নায়েবে আমীর</div>
+        </div>
+      </div>
+      <div class="pol-item">
+        <div class="pol-line"><div class="pol-dot"></div><div class="pol-connector"></div></div>
+        <div class="pol-content">
+          <div class="pol-period">২০০৯</div>
+          <div class="pol-role">শিবগঞ্জ উপজেলা পরিষদের চেয়ারম্যান নির্বাচিত</div>
+        </div>
+      </div>
+      <div class="pol-item">
+        <div class="pol-line"><div class="pol-dot"></div><div class="pol-connector"></div></div>
+        <div class="pol-content">
+          <div class="pol-period">২০১৪</div>
+          <div class="pol-role">কারাগারে থাকা অবস্থায় পুনরায় চেয়ারম্যান নির্বাচিত</div>
+        </div>
+      </div>
+      <div class="pol-item">
+        <div class="pol-line"><div class="pol-dot"></div></div>
+        <div class="pol-content">
+          <div class="pol-period">২০২৬</div>
+          <div class="pol-role">সংসদ সদস্য নির্বাচিত — চাঁপাইনবাবগঞ্জ-১ আসন</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="arrest-panel">
+        <div class="arrest-title">⚖️ কারানির্যাতনের ইতিহাস</div>
+        <div class="arrest-stat">
+          <div class="arrest-num">৯</div>
+          <div class="arrest-desc">বার কারাবরণ করেছেন — রাজনৈতিক বিশ্বাস ও মতের জন্য অবিচল থেকে।</div>
+        </div>
+        <div class="arrest-stat">
+          <div class="arrest-num">৫৪</div>
+          <div class="arrest-desc">টি মামলা দায়ের হয়েছে তাঁর বিরুদ্ধে।</div>
+        </div>
+        <div class="arrest-stat">
+          <div class="arrest-num">৩</div>
+          <div class="arrest-desc">বছরের বেশি সময় কারাগারে কাটিয়েছেন।</div>
+        </div>
+        <div style="margin-top:1.5rem; font-family:'Noto Sans Bengali',sans-serif; font-size:0.8rem; color:rgba(245,240,232,0.6); margin-bottom:0.75rem;">গ্রেফতারের বছরসমূহ:</div>
+        <div class="arrest-years">
+          <span class="arrest-year-pill">১৯৯১</span>
+          <span class="arrest-year-pill">১৯৯২</span>
+          <span class="arrest-year-pill">২০১২</span>
+          <span class="arrest-year-pill">২০১৩</span>
+          <span class="arrest-year-pill">২০১৪</span>
+          <span class="arrest-year-pill">২০১৬</span>
+          <span class="arrest-year-pill">২০১৭</span>
+          <span class="arrest-year-pill">২০২৩</span>
+        </div>
+      </div>
+
+      <div style="background:var(--forest-mid); padding:2rem; margin-top:1.5rem; color:var(--cream);">
+        <div style="font-family:'Noto Sans Bengali',sans-serif; font-size:0.75rem; color:var(--gold-light); letter-spacing:0.1em; margin-bottom:1rem;">বর্তমান দায়িত্ব</div>
+        <div style="font-size:0.95rem; font-weight:500; line-height:2;">
+          ✦ কেন্দ্রীয় মজলিশে শূরা সদস্য<br>
+          ✦ কেন্দ্রীয় কর্মপরিষদ সদস্য<br>
+          ✦ রাজশাহী মহানগরীর আমীর<br>
+          ✦ সংসদ সদস্য, চাঁপাইনবাবগঞ্জ-১
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="pub-section" id="publications">
+  <div class="section-header">
+    <span class="section-label">জ্ঞান ও গবেষণা</span>
+    <h2 class="section-title">রচনা ও গ্রন্থ</h2>
+    <div class="section-ornament"></div>
+  </div>
+
+  <div class="pub-card">
+    <div class="book-display">
+      <div class="book-spine"></div>
+      <div class="book-info">
+        <div class="book-label">📖 প্রকাশিত গ্রন্থ</div>
+        <div class="book-title">"চাঁপাইনবাবগঞ্জ অঞ্চলে ইসলাম প্রচারের এক শতাব্দী"</div>
+        <div class="book-desc">
+          পিএইচডি গবেষণা গ্রন্থ: "চাঁপাইনবাবগঞ্জ অঞ্চলে ইসলাম প্রচার ও সমাজ সংস্কারে আলিমদের ভূমিকা (১৯০০–২০০৬)" — রাজশাহী বিশ্ববিদ্যালয়, ২০১৪।
+          <br><br>
+          এছাড়াও শিক্ষা প্রতিষ্ঠান উন্নয়ন, অবকাঠামো নির্মাণ ও রাস্তাঘাট উন্নয়নে তাঁর বিশেষ অবদান রয়েছে।
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="social-section" id="social">
+  <div class="section-header">
+    <span class="section-label">সমাজ গড়ার দায়িত্বে</span>
+    <h2 class="section-title">সমাজসেবামূলক কার্যক্রম</h2>
+    <div class="section-ornament"></div>
+  </div>
+
+  <div class="social-grid">
+    <div class="social-card">
+      <span class="social-icon">🕌</span>
+      <div class="social-role">প্রধান উপদেষ্টা</div>
+      <div class="social-org">দাওয়াতুল ইসলাম ট্রাস্ট</div>
+    </div>
+    <div class="social-card">
+      <span class="social-icon">🤝</span>
+      <div class="social-role">উপদেষ্টা</div>
+      <div class="social-org">রাজশাহীস্থ চাঁপাইনবাবগঞ্জ ফোরাম</div>
+    </div>
+    <div class="social-card">
+      <span class="social-icon">🏫</span>
+      <div class="social-role">প্রতিষ্ঠাতা সদস্য</div>
+      <div class="social-org">শিবগঞ্জ ইসলামী একাডেমী</div>
+    </div>
+    <div class="social-card">
+      <span class="social-icon">🧒</span>
+      <div class="social-role">প্রতিষ্ঠাতা ও সভাপতি</div>
+      <div class="social-org">শিবগঞ্জ ইয়াতিমখানা</div>
+    </div>
+    <div class="social-card">
+      <span class="social-icon">⭐</span>
+      <div class="social-role">চেয়ারম্যান</div>
+      <div class="social-org">শাহ নেয়ামতউল্লাহ ট্রাস্ট</div>
+    </div>
+    <div class="social-card">
+      <span class="social-icon">📋</span>
+      <div class="social-role">গভর্নিং বডির সভাপতি</div>
+      <div class="social-org">বিভিন্ন কলেজ ও মাদ্রাসা</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">ড. কেরামত আলী</div>
+  <div class="footer-sub">চাঁপাইনবাবগঞ্জ · রাজশাহী · বাংলাদেশ</div>
+  <div class="footer-line"></div>
+  <div class="footer-sub">জন্মস্থান: জালমাছমারী, শিবগঞ্জ, চাঁপাইনবাবগঞ্জ</div>
+</footer>
+
+<script>
+  // Intersection Observer for animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.timeline-item, .pol-item').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Stagger delays for political items
+  document.querySelectorAll('.pol-item').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.08}s`;
+  });
+
+  // Stagger for timeline items
+  document.querySelectorAll('.timeline-item').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.1}s`;
+  });
+</script>
+</body>
+</html>
